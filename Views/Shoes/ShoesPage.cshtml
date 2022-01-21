@@ -1,7 +1,4 @@
-﻿
-@{
-    ViewBag.Title = "ShoesPage";
-}
+﻿@using ShoesStroreWebApplication__.NET_Project.Models;
 
 
 <!DOCTYPE html>
@@ -14,37 +11,13 @@
 </head>
 
 <body>
+    <h2>Shoes Section</h2>
     <div>
-        @foreach (var item in ViewBag.allShoes)
-        {
-            <div class="col-md-4">
-                <div class="card p-3 mb-2">
-                    <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-row align-items-center">
-                            <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
-                            <div class="ms-2 c-details">
-                                <img src=@item.linkImage class="mb-0">
-                            </div>
-                        </div>
-                        <div class="badge"> <span>@if (item.isOnSall)
-                        {<span>On Sall!</span>;
-                        }  </span> </div>
-                    </div>
-                    <div class="mt-5">
-                        <h3 class="heading">@item.shoeType<br>@item.company</h3>
-                        <div class="mt-5">
-                            <div class="mt-3"> <span class="text1">@item.shoePrice </span> </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
-    @*<div>
-            @foreach (var item in ViewBag.allShoes)
+        <div>
+            @foreach (Shoe item in ViewBag.allShoes)
             {
                 <div class="card">
-                    <img src=@item.linkImage class="card-img-top"><br />
+                    <img src=@item.linkImage><br />
                     <div class="card-body">
                         <h5 class="c-details">  @item.shoeType </h5>
                         @item.company <br />
@@ -52,10 +25,35 @@
                     </div>
                 </div>
             }
-        </div>*@
+        </div>
+
+        <div>
+            <table id="TableId">
+                <tr>
+                    <th class="THline">&nbsp;</th>
+                    <th class="THline">Shoe</th>
+                    <th class="THline">Model</th>
+                    <th class="THline">Price</th>
+                    <th class="THline">Sall</th>
+                </tr>
+
+                @foreach (Shoe shoe in @ViewBag.allShoes)
+                {
+                    <tr>
+                        <td><img src="@shoe.linkImage" id="imageInTable" /></td>
+                        <td class="THline">@shoe.shoeType</td>
+                        <td class="THline">@shoe.shoeModel</td>
+                        <td class="THline">@shoe.shoePrice</td>
+                        <td class="THline">@shoe.isOnSall</td>
+                    </tr>
+                }
 
 
 
+            </table>
+        </div>
+
+    </div>
     <footer></footer>
 </body>
 

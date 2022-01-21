@@ -9,10 +9,16 @@ namespace ShoesStroreWebApplication__.NET_Project.Controllers
 {
     public class ShoesController : Controller
     {
+
         ShoesContextDataContext dbTableShoes = new ShoesContextDataContext();
         public ActionResult ShoesPage()
         {
             ViewBag.allShoes = dbTableShoes.Shoes.ToList();
+            return View();
+        }
+        public ActionResult ShoeForTable()
+        {
+            ViewBag.allShoesToTable = dbTableShoes.Shoes.ToList();
             return View();
         }
     }
