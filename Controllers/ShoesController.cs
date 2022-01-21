@@ -16,10 +16,18 @@ namespace ShoesStroreWebApplication__.NET_Project.Controllers
             ViewBag.allShoes = dbTableShoes.Shoes.ToList();
             return View();
         }
-        public ActionResult ShoeForTable()
+        public ActionResult ShoesOnSale()
         {
-            ViewBag.allShoesToTable = dbTableShoes.Shoes.ToList();
+            var listOfSaleShoe = dbTableShoes.Shoes.GroupBy(item => item.isOnSall==true);
+            foreach (var shoe in listOfSaleShoe)
+            {
+                ViewBag.shesOnSale = shoe;
+          
+            }
+
             return View();
         }
+
+
     }
 }

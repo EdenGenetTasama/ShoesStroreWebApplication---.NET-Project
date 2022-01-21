@@ -1,0 +1,30 @@
+﻿@using ShoesStroreWebApplication__.NET_Project.Models;
+
+
+@{
+    ViewBag.Title = "ShoesOnSale";
+}
+@{
+    Random Discount = new Random();
+}
+<link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
+
+<h2>
+    <div>
+        @foreach (Shoe item in ViewBag.shesOnSale)
+        {
+            <div class="cardDiv">
+                <img src=@item.linkImage class="imageInCard">
+                <h4 class="shoeInfo">@item.shoeType</h4>
+                <h5 class="shoeInfo"> @item.company</h5>
+                <p class="shoeInfo">
+                    @item.shoePrice
+                </p>
+                <div class="shoeInfo">Discount: @Discount.Next(5, 40)%</div>
+
+
+            </div>
+        }
+    </div>
+</h2>
+
