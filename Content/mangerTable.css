@@ -1,3 +1,86 @@
 ﻿body {
-    background-color:green;
+    background-color: #F0ECE3;
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+.TableId {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid #A68DAD;
+}
+
+.imageInTable {
+    width: 200px;
+    height: 200px;
+}
+
+.tableHeader {
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Neonderthaw', cursive;
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+}
+
+thead th:nth-child(2) {
+    width: 20%;
+}
+
+thead th:nth-child(3) {
+    width: 15%;
+}
+
+thead th:nth-child(4) {
+    width: 35%;
+}
+
+th, td {
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+thead th, tfoot th {
+    font-family: 'Rock Salt', cursive;
+}
+
+th {
+    letter-spacing: 2px;
+}
+
+td {
+    letter-spacing: 1px;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tfoot th {
+    text-align: right;
+}
+
+thead, tfoot {
+    background: url(leopardskin.jpg);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+    thead th, tfoot th, tfoot td {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+        border: 5px solid #A68DAD;
+    }
+
+
+tbody tr:nth-child(even) {
+    background-color: #DFD3C3; /*lilac color*/
+    /
+}
+
+
+table {
+    background-color: #C7B198; /* purpule first color*/
 }

@@ -1,6 +1,6 @@
 ﻿
 body {
-    background-color: green;
+    background-color: #F0ECE3;
 }
 
 .cardContainer {
@@ -31,4 +31,9 @@ body {
     position: relative;
 }
 
+.ShoesHeader {
+    font-family: 'Neonderthaw', cursive;
+    font-size: 70px;
+    text-align: center;
+}
 

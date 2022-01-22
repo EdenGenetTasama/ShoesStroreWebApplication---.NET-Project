@@ -4,10 +4,13 @@
 
 <head>
     <link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h2>Shoes Section</h2>
+    <h2 class="ShoesHeader">Shoes Section</h2>
     <div>
         <a class="ChangeToSaleOnly" href="@Url.Action("ShoesOnSale","Shoes")"><button type="button">Sale only</button></a>
         <a class="ChangeToSaleOnly" href="@Url.Action("ManegerTableShoe","Shoes")"><button type="button">Manger Table</button></a>

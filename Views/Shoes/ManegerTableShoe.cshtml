@@ -1,34 +1,38 @@
 ﻿@using ShoesStroreWebApplication__.NET_Project.Models;
 
-@{
-    ViewBag.Title = "ManegerTableShoe";
-}
-<link href="@Url.Content("~/Content/mangerTable.css")" rel="stylesheet" type="text/css" />
 
-<h2>ManegerTableShoe</h2>
+<link href="@Url.Content("~/Content/mangerTable.css")" rel="stylesheet" type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
+
+<h2 class="tableHeader">Maneger Table Shoe</h2>
 
 <div>
     <table id="TableId">
-        <tr>
-            <th>&nbsp;</th>
-            <th>Shoe</th>
-            <th>Model</th>
-            <th>Price</th>
-            <th>Sall</th>
-        </tr>
-
-        @foreach (Shoe shoe in @ViewBag.allShoesToTable)
-        {
+        <thead>
             <tr>
-                <td><img src="@shoe.linkImage" id="imageInTable" /></td>
-                <td>@shoe.shoeType</td>
-                <td>@shoe.shoeModel</td>
-                <td>@shoe.shoePrice</td>
-                <td>@shoe.isOnSall</td>
+                <th>&nbsp;</th>
+                <th>Shoe</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Sale?</th>
             </tr>
-        }
+        </thead>
+        <tbody>
+            @foreach (Shoe shoe in @ViewBag.allShoesToTable)
+            {
+                <tr>
+                    <td><img src="@shoe.linkImage" class="imageInTable" /></td>
+                    <td>@shoe.shoeType</td>
+                    <td>@shoe.shoeModel</td>
+                    <td>@shoe.shoePrice</td>
+                    <td>@shoe.isOnSall</td>
+                </tr>
+            }
 
-
+        </tbody>
 
 
     </table>
