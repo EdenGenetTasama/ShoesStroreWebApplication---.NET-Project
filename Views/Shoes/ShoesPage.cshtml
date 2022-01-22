@@ -1,32 +1,28 @@
 ﻿@using ShoesStroreWebApplication__.NET_Project.Models;
 
 
-<!DOCTYPE html>
-<html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <h2>Shoes Section</h2>
     <div>
-        <a class="ChangeToSaleOnly" href="@Url.Action("ShoesOnSale","Shoes")">Show me Shoes On Sale only !</a>
+        <a class="ChangeToSaleOnly" href="@Url.Action("ShoesOnSale","Shoes")"><button type="button">Sale only</button></a>
+
         <div class="cardContainer">
             @foreach (Shoe item in ViewBag.allShoes)
             {
                 <div class="cardDiv">
                     <img src=@item.linkImage class="imageInCard">
-                    <h4 class="shoeInfo">@item.shoeType</h4>
-                    <h5 class="shoeInfo"> @item.company</h5>
+                    <h4 class="shoeInfo">@item.shoeType @item.shoeModel</h4>
                     <p class="shoeInfo">
-                        @item.shoePrice
+                        @item.shoePrice$  @item.company
                     </p>
                     @if (@item.isOnSall)
                     {
-                        <p class="shoeInfo">on salee</p>
+                        <div>on sale</div>
                     }
 
                 </div>
@@ -61,8 +57,5 @@
             </div>*@
 
     </div>
-    <footer></footer>
+
 </body>
-
-
-</html>
