@@ -8,23 +8,27 @@
     Random Discount = new Random();
 }
 <link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
 
-<h2>
-    <div class="cardContainer">
-        @foreach (Shoe item in ViewBag.shesOnSale)
-        {
-            <div class="cardDiv">
-                <img src=@item.linkImage class="imageInCard">
-                <h4 class="shoeInfo">@item.shoeType</h4>
-                <h5 class="shoeInfo"> @item.company</h5>
-                <p class="shoeInfo">
-                    @item.shoePrice
-                </p>
-                <div class="shoeInfo">Discount: @Discount.Next(20, 70)%</div>
+<h2 class="ShoesHeader">Shoes on sale Section</h2>
+<a class="ChangeToSaleOnly" href="@Url.Action("ShoesPage","Shoes")"><button type="button">back to all shoes</button></a>
+<a class="ChangeToSaleOnly" href="@Url.Action("ManegerTableShoe","Shoes")"><button type="button">Manger Table</button></a>
 
-
+<div class="cardContainer">
+    @foreach (Shoe item in ViewBag.shesOnSale)
+    {
+        <div class="cardDiv">
+            <img src=@item.linkImage class="imageInCard">
+            <h4 class="shoeInfo">@item.shoeType @item.shoeModel</h4>
+            <div class="onOffSaleLine">Discount: @Discount.Next(20, 70)%</div>
+            <div class="priceAndCompanyInfo">
+                @item.shoePrice$ @item.company
             </div>
-        }
-    </div>
-</h2>
+
+
+        </div>
+    }
+</div>
 
