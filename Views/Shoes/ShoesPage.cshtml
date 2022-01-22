@@ -10,6 +10,8 @@
     <h2>Shoes Section</h2>
     <div>
         <a class="ChangeToSaleOnly" href="@Url.Action("ShoesOnSale","Shoes")"><button type="button">Sale only</button></a>
+        <a class="ChangeToSaleOnly" href="@Url.Action("ManegerTableShoe","Shoes")"><button type="button">Manger Table</button></a>
+
 
         <div class="cardContainer">
             @foreach (Shoe item in ViewBag.allShoes)
@@ -29,32 +31,7 @@
             }
         </div>
 
-        @*<div>
-                <table id="TableId">
-                    <tr>
-                        <th class="THline">&nbsp;</th>
-                        <th class="THline">Shoe</th>
-                        <th class="THline">Model</th>
-                        <th class="THline">Price</th>
-                        <th class="THline">Sall</th>
-                    </tr>
 
-                    @foreach (Shoe shoe in @ViewBag.allShoes)
-                    {
-                        <tr>
-                            <td><img src="@shoe.linkImage" id="imageInTable" /></td>
-                            <td class="THline">@shoe.shoeType</td>
-                            <td class="THline">@shoe.shoeModel</td>
-                            <td class="THline">@shoe.shoePrice</td>
-                            <td class="THline">@shoe.isOnSall</td>
-                        </tr>
-                    }
-
-
-
-
-                </table>
-            </div>*@
 
     </div>
 

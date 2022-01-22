@@ -28,6 +28,12 @@ namespace ShoesStroreWebApplication__.NET_Project.Controllers
             return View();
         }
 
+        public ActionResult ManegerTableShoe()
+        {
+            ViewBag.allShoesToTable = dbTableShoes.Shoes.ToList();
+            return View();
+        }
+
 
     }
 }

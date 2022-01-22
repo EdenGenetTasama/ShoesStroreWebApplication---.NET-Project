@@ -1,0 +1,35 @@
+﻿@using ShoesStroreWebApplication__.NET_Project.Models;
+
+@{
+    ViewBag.Title = "ManegerTableShoe";
+}
+<link href="@Url.Content("~/Content/mangerTable.css")" rel="stylesheet" type="text/css" />
+
+<h2>ManegerTableShoe</h2>
+
+<div>
+    <table id="TableId">
+        <tr>
+            <th>&nbsp;</th>
+            <th>Shoe</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Sall</th>
+        </tr>
+
+        @foreach (Shoe shoe in @ViewBag.allShoesToTable)
+        {
+            <tr>
+                <td><img src="@shoe.linkImage" id="imageInTable" /></td>
+                <td>@shoe.shoeType</td>
+                <td>@shoe.shoeModel</td>
+                <td>@shoe.shoePrice</td>
+                <td>@shoe.isOnSall</td>
+            </tr>
+        }
+
+
+
+
+    </table>
+</div>
