@@ -135,9 +135,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ShirtsController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShirtsContext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShirtsContext.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\ShoesContext.designer.cs">
       <AutoGen>True</AutoGen>
@@ -164,6 +170,14 @@
       <LastGenOutput>ShoesContext.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Models\ShirtsContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ShirtsContext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\ShirtsContext.dbml.layout">
+      <DependentUpon>ShirtsContext.dbml</DependentUpon>
+    </None>
     <None Include="Models\ShoesContext.dbml.layout">
       <DependentUpon>ShoesContext.dbml</DependentUpon>
     </None>
@@ -195,6 +209,9 @@
     <Content Include="Views\Shoes\ShoesPage.cshtml" />
     <Content Include="Views\Shoes\ShoesOnSale.cshtml" />
     <Content Include="Views\Shoes\ManegerTableShoe.cshtml" />
+    <Content Include="Views\Shirts\ShirtsPage.cshtml" />
+    <Content Include="Views\Shirts\MangerTableShirts.cshtml" />
+    <Content Include="Views\Shirts\GetOnlyLongShirts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

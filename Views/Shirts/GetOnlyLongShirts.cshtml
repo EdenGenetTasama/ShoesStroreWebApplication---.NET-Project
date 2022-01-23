@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "GetOnlyLongShirts";
+}
+<link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
+
+
+<h2 class="ShoesHeader">Only Long Shirts</h2>
+
+<div>
+    <div class="cardContainer">
+        @foreach (var item in @ViewBag.onlyLongShirt)
+        {
+            <div class="cardDiv">
+                <img src=@item.linkToClothing class="imageInCard">
+                <h4 class="shoeInfo">@item.clothingType @item.clothingModel</h4>
+                <p class="priceAndCompanyInfo">
+                    @item.clothingPrice$  @item.clothingCompany
+                </p>
+
+            </div>
+        }
+    </div>
+</div>
+

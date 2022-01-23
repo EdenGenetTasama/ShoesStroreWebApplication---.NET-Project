@@ -1,0 +1,31 @@
+﻿
+@using ShoesStroreWebApplication__.NET_Project.Models;
+
+@{
+    ViewBag.Title = "ShirtsPage";
+}
+
+<link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
+
+<h2 class="ShoesHeader">Shirts Section</h2>
+<div>
+    <a class="" href="@Url.Action("GetOnlyLongShirts","Shirts")"><button type="button">Long Shirts</button></a>
+    <a class="" href="@Url.Action("MangerTableShirts","Shirts")"><button type="button">Manger Mode</button></a>
+    @*<a class="" href="@Url.Action("ManegerTableShoe","Shoes")"><button type="button">Short Shirts</button></a>*@
+    <div class="cardContainer">
+        @foreach (var item in @ViewBag.AllShirts)
+        {
+            <div class="cardDiv">
+                <img src=@item.linkToClothing class="imageInCard">
+                <h4 class="shoeInfo">@item.clothingType @item.clothingModel</h4>
+                <p class="priceAndCompanyInfo">
+                    @item.clothingPrice$  @item.clothingCompany
+                </p>
+
+            </div>
+        }
+    </div>
+</div>
