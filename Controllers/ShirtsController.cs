@@ -10,65 +10,50 @@ namespace ShoesStroreWebApplication__.NET_Project.Controllers
     public class ShirtsController : Controller
     {
         ShirtsContextDataContext dbCloting = new ShirtsContextDataContext();
-     
+
 
         // GET: Shirts
         public ActionResult ShirtsPage()
         {
-            var listOfShirts = dbCloting.clothings.GroupBy(item => item.clothingType == "Shirt");
-            foreach (var shirt in listOfShirts)
-            {
-                ViewBag.AllShirts = shirt;
-
-            }
-        
+            List<clothing> listOfShirts = dbCloting.clothings.Where(item => item.clothingType == "Shirt").ToList();
+            ViewBag.AllShirts = listOfShirts;
             return View();
         }
 
         // GET: Shirts/Details/5
         public ActionResult MangerTableShirts()
         {
-            var listOfShirts = dbCloting.clothings.GroupBy(item => item.clothingType == "Shirt");
-            foreach (var shirt in listOfShirts)
-            {
-                ViewBag.AllShirts = shirt;
-
-            }
-
+            List<clothing> listOfShirtsToTable = dbCloting.clothings.Where(item => item.clothingType == "Shirt").ToList();
+                ViewBag.AllShirtsToTable = listOfShirtsToTable;
             return View();
         }
 
         // GET: Shirts/Create
         public ActionResult GetOnlyLongShirts()
         {
-            var onlyLongShorts = dbCloting.clothings.GroupBy(item => item.clothingType == "Shirt" & item.isClothingShort == false);
-            foreach (var shirt in onlyLongShorts)
-            {
-                ViewBag.onlyLongShirt = shirt;
-
-            }
+            List<clothing> onlyLongShorts = dbCloting.clothings.Where(item => item.clothingType == "Shirt" & item.isClothingShort == false).ToList();
+                ViewBag.onlyLongShirt = onlyLongShorts;
             return View();
         }
 
         public ActionResult GetOnlyShortShirts()
         {
-            var onlyShortShirts = dbCloting.clothings.GroupBy(item => item.clothingType == "Shirt" & item.isClothingShort == true);
-            foreach (var shirt in onlyShortShirts)
-            {
-                ViewBag.onlyShortShirts = shirt;
-
-            }
+            List<clothing> onlyShortShirts = dbCloting.clothings.Where(item => item.clothingType == "Shirt" & item.isClothingShort == true).ToList();
+            ViewBag.onlyShortShirts = onlyShortShirts;
             return View();
         }
 
         public ActionResult GetOnlyDryFitShirts()
         {
-            var onlyDryFitShirts = dbCloting.clothings.GroupBy(item => item.clothingType == "Shirt" & item.isClothingDrifit == true);
-            foreach (var shirt in onlyDryFitShirts)
-            {
-                ViewBag.onlyDryFitShirts = shirt;
+            List<clothing> onlyDryFitShirts = dbCloting.clothings.Where(item => item.clothingType == "Shirt" & item.isClothingDrifit == true).ToList();
+                ViewBag.onlyDryFitShirts = onlyDryFitShirts;
+            return View();
+        }
 
-            }
+        public ActionResult SortByPrice()
+        {
+            List<clothing> listOfShirts = dbCloting.clothings.Where(item => item.clothingType == "Shirt").OrderBy(clothe => clothe.clothingPrice).ToList();
+            ViewBag.sortByPrice = listOfShirts;
             return View();
         }
     }

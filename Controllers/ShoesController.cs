@@ -18,13 +18,8 @@ namespace ShoesStroreWebApplication__.NET_Project.Controllers
         }
         public ActionResult ShoesOnSale()
         {
-            var listOfSaleShoe = dbTableShoes.Shoes.GroupBy(item => item.isOnSall==true);
-            foreach (var shoe in listOfSaleShoe)
-            {
-                ViewBag.shesOnSale = shoe;
-          
-            }
-
+            List<Shoe> listOfSaleShoe = dbTableShoes.Shoes.Where(item=> item.isOnSall == true).ToList();
+            ViewBag.shesOnSale = listOfSaleShoe;
             return View();
         }
 

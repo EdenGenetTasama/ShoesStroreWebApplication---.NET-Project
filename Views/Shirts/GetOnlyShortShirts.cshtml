@@ -1,4 +1,4 @@
-﻿
+﻿@using ShoesStroreWebApplication__.NET_Project.Models;
 @{
     ViewBag.Title = "GetOnlyShortsShirts";
 }
@@ -15,8 +15,10 @@
     <a class="" href="@Url.Action("MangerTableShirts","Shirts")"><button type="button">Manger Mode</button></a>
     <a class="" href="@Url.Action("GetOnlyLongShirts","Shirts")"><button type="button">Long Shirts</button></a>
     <a class="" href="@Url.Action("GetOnlyDryFitShirts","Shirts")"><button type="button">DryFit Only</button></a>
+    <a class="" href="@Url.Action("SortByPrice","Shirts")"><button type="button">Sort low to hige</button></a>
+
     <div class="cardContainer">
-        @foreach (var item in @ViewBag.onlyShortShirts)
+        @foreach (clothing item in @ViewBag.onlyShortShirts)
         {
             <div class="cardDiv">
                 <img src=@item.linkToClothing class="imageInCard">
