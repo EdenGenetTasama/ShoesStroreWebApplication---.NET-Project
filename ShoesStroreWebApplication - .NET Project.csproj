@@ -212,6 +212,8 @@
     <Content Include="Views\Shirts\ShirtsPage.cshtml" />
     <Content Include="Views\Shirts\MangerTableShirts.cshtml" />
     <Content Include="Views\Shirts\GetOnlyLongShirts.cshtml" />
+    <Content Include="Views\Shirts\GetOnlyShortShirts.cshtml" />
+    <Content Include="Views\Shirts\GetOnlyDryFitShirts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

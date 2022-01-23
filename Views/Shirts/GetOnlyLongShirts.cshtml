@@ -3,11 +3,18 @@
     ViewBag.Title = "GetOnlyLongShirts";
 }
 <link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
 
 
 <h2 class="ShoesHeader">Only Long Shirts</h2>
 
 <div>
+    <a class="" href="@Url.Action("ShirtsPage","Shirts")"><button type="button">All shirts</button></a>
+    <a class="" href="@Url.Action("MangerTableShirts","Shirts")"><button type="button">Manger Mode</button></a>
+    <a class="" href="@Url.Action("GetOnlyShortShirts","Shirts")"><button type="button">Short Shirts</button></a>
+    <a class="" href="@Url.Action("GetOnlyDryFitShirts","Shirts")"><button type="button">DryFit Only</button></a>
     <div class="cardContainer">
         @foreach (var item in @ViewBag.onlyLongShirt)
         {

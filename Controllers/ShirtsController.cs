@@ -50,8 +50,25 @@ namespace ShoesStroreWebApplication__.NET_Project.Controllers
             return View();
         }
 
-        public ActionResult Create()
+        public ActionResult GetOnlyShortShirts()
         {
+            var onlyShortShirts = dbCloting.clothings.GroupBy(item => item.clothingType == "Shirt" & item.isClothingShort == true);
+            foreach (var shirt in onlyShortShirts)
+            {
+                ViewBag.onlyShortShirts = shirt;
+
+            }
+            return View();
+        }
+
+        public ActionResult GetOnlyDryFitShirts()
+        {
+            var onlyDryFitShirts = dbCloting.clothings.GroupBy(item => item.clothingType == "Shirt" & item.isClothingDrifit == true);
+            foreach (var shirt in onlyDryFitShirts)
+            {
+                ViewBag.onlyDryFitShirts = shirt;
+
+            }
             return View();
         }
     }
