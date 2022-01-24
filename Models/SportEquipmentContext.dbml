@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SportStoreDB" Class="SportEquipmentContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-0MT6QTG;Initial Catalog=SportStoreDB;Integrated Security=True;Pooling=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SportStoreDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.sportEquipment" Member="sportEquipments">
+    <Type Name="sportEquipment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sportBranch" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="productName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="productCompany" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="productPrice" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="productAmount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SportClubsID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="linkToImage" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="SportsClub_sportEquipment" Member="SportsClub" ThisKey="SportClubsID" OtherKey="Id" Type="SportsClub" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SportsClubs" Member="SportsClubs">
+    <Type Name="SportsClub">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sportTeam" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="SportsClub_sportEquipment" Member="sportEquipments" ThisKey="Id" OtherKey="SportClubsID" Type="sportEquipment" />
+    </Type>
+  </Table>
+</Database>

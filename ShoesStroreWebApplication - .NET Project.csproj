@@ -138,6 +138,7 @@
     <Compile Include="Controllers\PantsController.cs" />
     <Compile Include="Controllers\ShirtsController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
+    <Compile Include="Controllers\SportEquipmentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -150,6 +151,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShoesContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SportEquipmentContext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SportEquipmentContext.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -181,6 +187,14 @@
     </None>
     <None Include="Models\ShoesContext.dbml.layout">
       <DependentUpon>ShoesContext.dbml</DependentUpon>
+    </None>
+    <Content Include="Models\SportEquipmentContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SportEquipmentContext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\SportEquipmentContext.dbml.layout">
+      <DependentUpon>SportEquipmentContext.dbml</DependentUpon>
     </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -222,6 +236,11 @@
     <Content Include="Views\Pants\OnlyShortsPants.cshtml" />
     <Content Include="Views\Pants\GetOnlyDryFitPants.cshtml" />
     <Content Include="Views\Pants\SortByPricePants.cshtml" />
+    <Content Include="Views\SportEquipment\EquipmentPage.cshtml" />
+    <Content Include="Views\SportEquipment\MangerMode.cshtml" />
+    <Content Include="Views\SportEquipment\OnlyBaskBallEquipment.cshtml" />
+    <Content Include="Views\SportEquipment\OnlyFootballEquipment.cshtml" />
+    <Content Include="Views\SportEquipment\SortEquipment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

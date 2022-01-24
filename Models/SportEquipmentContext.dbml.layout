@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SportEquipmentContext">
+  <DataContextMoniker Name="/SportEquipmentContextDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2c30baf1-8eaa-44d7-b268-c8bbe7d11117" absoluteBounds="2, 1.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/SportEquipmentContextDataContext/sportEquipment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a3837b5-d9cd-433a-9bb4-97b30867b8c4" absoluteBounds="2.015, 2.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a787fef7-3f57-4a51-a06f-fef05bd2ab58" absoluteBounds="0.5, 0.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/SportEquipmentContextDataContext/SportsClub" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13156e46-ba6e-4d41-b32b-82fa7d40dd32" absoluteBounds="0.515, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 0.875); (1.5 : 0.625); (3 : 0.625); (3 : 1.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SportEquipmentContextDataContext/SportsClub/SportsClub_sportEquipment" />
+      <nodes>
+        <classShapeMoniker Id="a787fef7-3f57-4a51-a06f-fef05bd2ab58" />
+        <classShapeMoniker Id="2c30baf1-8eaa-44d7-b268-c8bbe7d11117" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

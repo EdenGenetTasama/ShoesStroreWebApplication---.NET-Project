@@ -1,0 +1,48 @@
+﻿@using ShoesStroreWebApplication__.NET_Project.Models;
+
+@{
+    ViewBag.Title = "MangerMode";
+}
+
+<h2 class="tableHeader">MangerMode</h2>
+
+
+
+<link href="@Url.Content("~/Content/mangerTable.css")" rel="stylesheet" type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
+
+<a class="ChangeToSaleOnly" href="@Url.Action("MangerMode","sportEquipment")"><button type="button">Manger Mode</button></a>
+
+@*<a class="ChangeToSaleOnly" href="@Url.Action("ShoesPage","Shoes")"><button type="button">All shoes</button></a>
+    <a class="ChangeToSaleOnly" href="@Url.Action("ShoesOnSale","Shoes")"><button type="button">Sale only</button></a>*@
+<div>
+    <table id="TableId">
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Branch</th>
+                <th>Product</th>
+                <th>productCompany</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (sportEquipment item in @ViewBag.MangerMode)
+            {
+                <tr>
+                    <td><img src="@item.linkToImage" class="imageInTable" /></td>
+                    <td>@item.sportBranch</td>
+                    <td>@item.productName</td>
+                    <td>@item.productCompany</td>
+                    <td>@item.productPrice$</td>
+                </tr>
+            }
+
+        </tbody>
+
+
+    </table>
+</div>
