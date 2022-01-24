@@ -1,0 +1,46 @@
+﻿@using ShoesStroreWebApplication__.NET_Project.Models;
+@{
+    ViewBag.Title = "MangerTable";
+}
+<link href="@Url.Content("~/Content/mangerTable.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
+
+<h2 class="ShoesHeader">Manger Table Pants</h2>
+
+<div>
+    <a class="" href="@Url.Action("ShowPantsall","Pants")"><button type="button">All shoes</button></a>
+    <a class="" href="@Url.Action("OnlyLongPants","Pants")"><button type="button">Long Pants</button></a>
+    <a class="" href="@Url.Action("OnlyShortsPants","Pants")"><button type="button">Short Pants</button></a>
+    <a class="" href="@Url.Action("GetOnlyDryFitPants","Pants")"><button type="button">DryFit Only</button></a>
+    <a class="" href="@Url.Action("SortByPricePants","Pants")"><button type="button">Sort</button></a>
+    <table id="TableId">
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Gender</th>
+                <th>Shirt</th>
+                <th>Model</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (clothing item in @ViewBag.AllPantsToTable)
+            {
+                <tr>
+                    <td><img src="@item.linkToClothing" class="imageInTable" /></td>
+                    <td>@item.clothingGender</td>
+                    <td>@item.clothingType</td>
+                    <td>@item.clothingModel</td>
+                    <td>@item.clothingPrice$</td>
+                </tr>
+            }
+
+        </tbody>
+
+
+    </table>
+</div>
