@@ -13,8 +13,9 @@
 
 
 <div>
-    <a class="ChangeToSaleOnly" href="@Url.Action("EquipmentPage","sportEquipment")"><button type="button">Equipment Page</button></a>
-    @*<a class="ChangeToSaleOnly" href="@Url.Action("ManegerTableShoe","Shoes")"><button type="button">Manger Table</button></a>*@
+    <a class="ChangeToSaleOnly" href="@Url.Action("EquipmentPage","sportEquipment")"><button type="button">All Equipment</button></a>
+    <a class="ChangeToSaleOnly" href="@Url.Action("MangerMode","sportEquipment")"><button type="button">Manger Mode</button></a>
+    <a class="ChangeToSaleOnly" href="@Url.Action("OnlyBaskBallEquipment","sportEquipment")"><button type="button">Only Basketball </button></a>
 
     <div class="cardContainer">
         @foreach (sportEquipment item in ViewBag.onlyFootball)

@@ -1,6 +1,7 @@
 ﻿
 body {
-    background-color: #F0ECE3;
+        background-color: #F0ECE3;
+/*    background-color:green;*/
 }
 
 .cardContainer {
@@ -54,4 +55,19 @@ body {
     font-family: 'Neonderthaw', cursive;
     font-size: 70px;
     text-align: center;
+}
+
+.divOfButton {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ButtonChangeView:hover{
+    background-color:yellow;
+}
+
+.ChangeToSaleOnly{
+    color:violet;
 }
