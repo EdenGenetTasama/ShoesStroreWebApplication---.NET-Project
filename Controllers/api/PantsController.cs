@@ -89,7 +89,7 @@ namespace ShoesStroreWebApplication__.NET_Project.Controllers.api
                     findItemToUpdate.linkToClothing=pantsToUpdate.linkToClothing;
 
                     dbCloting.SubmitChanges();
-                    return Ok($"Changes saved");
+                    return Ok($"Changes saved");  
                 }
                 return NotFound();
             }
