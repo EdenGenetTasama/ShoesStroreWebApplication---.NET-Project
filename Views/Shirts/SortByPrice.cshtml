@@ -6,10 +6,19 @@
 <link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lobster&family=Neonderthaw&display=swap" rel="stylesheet">
 
 
-<h2 class="ShoesHeader">Sort price low to hig</h2>
+<h2 class="ShoesHeader">Sort</h2>
+<div class="DivOfButtons">
+    <a href="@Url.Action("ShirtsPage","Shirts")"><button class="btn btn-success me-md-2 btn-lg active" type="button">All shirts</button></a>
+    <a href="@Url.Action("MangerTableShirts","Shirts")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Manger Mode</button></a>
+    <a href="@Url.Action("GetOnlyShortShirts","Shirts")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Short Shirts</button></a>
+    <a href="@Url.Action("GetOnlyLongShirts","Shirts")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Long Shirts </button></a>
+    <a href="@Url.Action("GetOnlyDryFitShirts","Shirts")"><button class="btn btn-success me-md-2 btn-lg active" type="button">DryFit Only</button></a>
+
+</div>
+
 <div class="cardContainer">
     @foreach (clothing item in @ViewBag.sortByPrice)
     {
