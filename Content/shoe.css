@@ -1,7 +1,7 @@
 ﻿
 body {
     background-color: #F0ECE3;
-    /*    background-color:green;*/
+
 }
 
 .cardContainer {
@@ -64,15 +64,21 @@ body {
     text-align: center;
 }
 
-.divOfButton {
+.DivOfButtons {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:2%;
+}
+
+.btn btn-primary me-md-2 btn-lg{
+
+background-color:aquamarine;
 }
 
 
-.ButtonChangeView {
+/*.ButtonChangeView {
     font-size: 25%;
 }
 
@@ -137,4 +143,4 @@ body {
    .ButtonChangeView {
         padding: 0 40px;
     }
-}
+}*/

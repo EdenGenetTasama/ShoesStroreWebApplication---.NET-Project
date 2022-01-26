@@ -4,21 +4,24 @@
     ViewBag.Title = "OnlyBaskBallEquipment";
 }
 
-<h2 class="ShoesHeader">OnlyBaskBallEquipment</h2>
+<h2 class="ShoesHeader">Only BaskBall Equipment</h2>
 
 
 
 <link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lobster&family=Neonderthaw&display=swap" rel="stylesheet">
 
 
 <div>
-    <a class="ChangeToSaleOnly" href="@Url.Action("EquipmentPage","sportEquipment")"><button type="button">All Equipment</button></a>
-    <a class="ChangeToSaleOnly" href="@Url.Action("MangerMode","sportEquipment")"><button type="button">Manger Mode</button></a>
-    <a class="ChangeToSaleOnly" href="@Url.Action("OnlyFootballEquipment","sportEquipment")"><button type="button">Only Football</button></a>
+    <div class="DivOfButtons">
+        <a href="@Url.Action("EquipmentPage","sportEquipment")"><button class="btn btn-success me-md-2 btn-lg active" type="button">All Equipment</button></a>
+        <a href="@Url.Action("MangerMode","sportEquipment")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Manger Mode</button></a>
+        <a href="@Url.Action("OnlyFootballEquipment","sportEquipment")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Only Football</button></a>
+        <a href="@Url.Action("SortEquipment","sportEquipment")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Sort Equipment</button></a>
 
+    </div>
     <div class="cardContainer">
         @foreach (sportEquipment item in ViewBag.onlyBaskball)
         {

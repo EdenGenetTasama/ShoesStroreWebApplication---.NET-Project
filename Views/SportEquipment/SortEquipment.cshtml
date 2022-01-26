@@ -4,7 +4,7 @@
     ViewBag.Title = "SortEquipment";
 }
 
-<h2 class="ShoesHeader">SortEquipment</h2>
+<h2 class="ShoesHeader">Sort Item Equipment</h2>
 
 
 <link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
@@ -15,8 +15,12 @@
 
 
 <div>
-    <a class="ChangeToSaleOnly" href="@Url.Action("EquipmentPage","sportEquipment")"><button type="button" class="btn btn-primary">Equipment Page</button></a>
-    @*<a class="ChangeToSaleOnly" href="@Url.Action("ManegerTableShoe","Shoes")"><button type="button">Manger Table</button></a>*@
+    <div class="DivOfButtons">
+        <a href="@Url.Action("EquipmentPage","sportEquipment")"><button class="btn btn-success me-md-2 btn-lg active" type="button">All Equipment</button></a>
+        <a href="@Url.Action("EquipmentPage","sportEquipment")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Equipment Page</button></a>
+        <a href="@Url.Action("OnlyBaskBallEquipment","sportEquipment")"><button  class="btn btn-success me-md-2 btn-lg active" type="button">Only Basketball</button></a>
+        <a href="@Url.Action("OnlyFootballEquipment","sportEquipment")"><button  class="btn btn-success me-md-2 btn-lg active" type="button">Only Football</button></a>
+    </div>
 
     <div class="cardContainer">
         @foreach (sportEquipment item in ViewBag.toSort)
