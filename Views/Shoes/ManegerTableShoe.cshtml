@@ -15,22 +15,30 @@
         <thead>
             <tr>
                 <th>&nbsp;</th>
+                <th>Id</th>
+                <th>Company</th>
                 <th>Shoe</th>
                 <th>Model</th>
                 <th>Price</th>
                 <th>Sale?</th>
+                <th>Amount</th>
+
             </tr>
         </thead>
         <tbody>
             @foreach (Shoe shoe in @ViewBag.allShoesToTable)
             {
-                <tr>
-                    <td><img src="@shoe.linkImage" class="imageInTable" /></td>
-                    <td>@shoe.shoeType</td>
-                    <td>@shoe.shoeModel</td>
-                    <td>@shoe.shoePrice$</td>
-                    <td>@shoe.isOnSall</td>
-                </tr>
+            <tr>
+                <td><img src="@shoe.linkImage" class="imageInTable" /></td>
+                <td>@shoe.Id</td>
+                <td>@shoe.company</td>
+                <td>@shoe.shoeType</td>
+                <td>@shoe.shoeModel</td>
+                <td>@shoe.shoePrice$</td>
+                <td>@shoe.isOnSall</td>
+                <td>@shoe.shoeAmount </td>
+
+            </tr>
             }
 
         </tbody>
