@@ -5,6 +5,7 @@
 <link href="@Url.Content("~/Content/mangerTable.css")" rel="stylesheet" type="text/css" />
 <link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
 
+<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
@@ -20,10 +21,15 @@
         <thead>
             <tr>
                 <th>&nbsp;</th>
+                <th>Id</th>
+                <th>Company</th>
                 <th>Gender</th>
                 <th>Shirt</th>
                 <th>Model</th>
+                <th>Is Short? Is Dryfit?</th>
                 <th>Price</th>
+                <th>Amount</th>
+
             </tr>
         </thead>
         <tbody>
@@ -31,10 +37,15 @@
             {
                 <tr>
                     <td><img src="@item.linkToClothing" class="imageInTable" /></td>
+                    <td>@item.Id</td>
+                    <td>@item.clothingCompany</td>
                     <td>@item.clothingGender</td>
                     <td>@item.clothingType</td>
                     <td>@item.clothingModel</td>
+                    <td>@item.isClothingShort , @item.isClothingDrifit</td>
                     <td>@item.clothingPrice$</td>
+                    <td>@item.clothingAmount</td>
+
                 </tr>
             }
 
