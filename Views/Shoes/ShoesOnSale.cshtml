@@ -10,12 +10,14 @@
 <link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lobster&family=Neonderthaw&display=swap" rel="stylesheet">
 
-<h2 class="ShoesHeader">Shoes on sale Section</h2>
-<a class="ChangeToSaleOnly" href="@Url.Action("ShoesPage","Shoes")"><button type="button">back to all shoes</button></a>
-<a class="ChangeToSaleOnly" href="@Url.Action("ManegerTableShoe","Shoes")"><button type="button">Manger Table</button></a>
+<h2 class="ShoesHeader">Shoes on sale</h2>
 
+<div class="DivOfButtons">
+    <a href="@Url.Action("ShoesPage","Shoes")"><button class="btn btn-success me-md-2 btn-lg active" type="button">All shoes</button></a>
+    <a href="@Url.Action("ManegerTableShoe","Shoes")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Manger Table</button></a>
+</div>
 <div class="cardContainer">
     @foreach (Shoe item in ViewBag.shesOnSale)
     {

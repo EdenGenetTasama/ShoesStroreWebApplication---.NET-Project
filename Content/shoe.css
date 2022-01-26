@@ -13,7 +13,7 @@ body {
     flex-wrap: wrap;
     position: relative;
 }
-
+///////////////////////////////////////////////
 .top-left-Text {
     position: absolute;
     top: 8px;
@@ -43,7 +43,7 @@ body {
 
 .onOffSaleLine {
     font-size: 20px;
-    color: white;
+    color: black;
     font-family: 'Gloria Hallelujah', cursive;
 }
 
