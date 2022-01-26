@@ -4,52 +4,51 @@
 }
 <link href="@Url.Content("~/Content/mangerTable.css")" rel="stylesheet" type="text/css" />
 <link href="@Url.Content("~/Content/shoe.css")" rel="stylesheet" type="text/css" />
-
-<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Neonderthaw&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lobster&family=Neonderthaw&display=swap" rel="stylesheet">
 
 <h2 class="ShoesHeader">Manger Table Pants</h2>
-
-<div>
-    <a class="" href="@Url.Action("ShowPantsall","Pants")"><button type="button">All shoes</button></a>
-    <a class="" href="@Url.Action("OnlyLongPants","Pants")"><button type="button">Long Pants</button></a>
-    <a class="" href="@Url.Action("OnlyShortsPants","Pants")"><button type="button">Short Pants</button></a>
-    <a class="" href="@Url.Action("GetOnlyDryFitPants","Pants")"><button type="button">DryFit Only</button></a>
-    <a class="" href="@Url.Action("SortByPricePants","Pants")"><button type="button">Sort</button></a>
-    <table id="TableId">
-        <thead>
-            <tr>
-                <th>&nbsp;</th>
-                <th>Id</th>
-                <th>Company</th>
-                <th>Gender</th>
-                <th>Shirt</th>
-                <th>Model</th>
-                <th>Is Short? Is Dryfit?</th>
-                <th>Price</th>
-                <th>Amount</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (clothing item in @ViewBag.AllPantsToTable)
-            {
-            <tr>
-                <td><img src="@item.linkToClothing" class="imageInTable" /></td>
-                <td>@item.Id</td>
-                <td>@item.clothingCompany</td>
-                <td>@item.clothingGender</td>
-                <td>@item.clothingType</td>
-                <td>@item.clothingModel</td>
-                <td>@item.isClothingShort , @item.isClothingDrifit</td>
-                <td>@item.clothingPrice$</td>
-                <td>@item.clothingAmount</td>
-            </tr>
-            }
-
-        </tbody>
-
-
-    </table>
+<div class="DivOfButtons">
+    <a href="@Url.Action("ShowPantsall","Pants")"><button class="btn btn-success me-md-2 btn-lg active" type="button">All shoes</button></a>
+    <a href="@Url.Action("OnlyLongPants","Pants")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Long Pants</button></a>
+    <a href="@Url.Action("OnlyShortsPants","Pants")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Short Pants</button></a>
+    <a href="@Url.Action("GetOnlyDryFitPants","Pants")"><button class="btn btn-success me-md-2 btn-lg active" type="button">DryFit Only</button></a>
+    <a href="@Url.Action("SortByPricePants","Pants")"><button class="btn btn-success me-md-2 btn-lg active" type="button">Sort</button></a>
 </div>
+    <div>
+        <table id="TableId">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Id</th>
+                    <th>Company</th>
+                    <th>Gender</th>
+                    <th>Shirt</th>
+                    <th>Model</th>
+                    <th>Is Short? Is Dryfit?</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (clothing item in @ViewBag.AllPantsToTable)
+                {
+                    <tr>
+                        <td><img src="@item.linkToClothing" class="imageInTable" /></td>
+                        <td>@item.Id</td>
+                        <td>@item.clothingCompany</td>
+                        <td>@item.clothingGender</td>
+                        <td>@item.clothingType</td>
+                        <td>@item.clothingModel</td>
+                        <td>@item.isClothingShort , @item.isClothingDrifit</td>
+                        <td>@item.clothingPrice$</td>
+                        <td>@item.clothingAmount</td>
+                    </tr>
+                }
+
+            </tbody>
+
+
+        </table>
+    </div>
