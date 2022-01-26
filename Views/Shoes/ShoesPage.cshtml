@@ -14,7 +14,7 @@
 
     <div class="divOfButton">
     <a class="ChangeToSaleOnly" href="@Url.Action("ShoesOnSale","Shoes")"><button type="button" class="ButtonChangeView">Sale only</button></a>
-    <a class="ChangeToSaleOnly" href="@Url.Action("ManegerTableShoe","Shoes")"><button type="button">Manger Table</button></a>
+    <a class="ChangeToSaleOnly" href="@Url.Action("ManegerTableShoe","Shoes")"><button type="button" class="ButtonChangeView">Manger Table</button></a>
     </div>
 
 
@@ -24,16 +24,16 @@
             <div class="cardDiv">
                 <img src=@item.linkImage class="imageInCard">
                 <h4 class="shoeInfo">@item.shoeType @item.shoeModel</h4>
-                <p >
+                <div class="top-left-Text" >
                     @if (@item.isOnSall)
                     {
                         <div class="onOffSaleLine">on sale</div>
                     }
                     else
                     {
-                        <div class="onOffSaleLine">not on sale</div>
+                        <div class="onOffSaleLine">not sale</div>
                     }
-                </p>
+                </div>
                 <p class="priceAndCompanyInfo">
                     @item.shoePrice$  @item.company
                 </p>

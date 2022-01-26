@@ -22,22 +22,28 @@
         <thead>
             <tr>
                 <th>&nbsp;</th>
+                <th>Id</th>
                 <th>Branch</th>
                 <th>Product</th>
-                <th>productCompany</th>
+                <th>Company</th>
                 <th>Price</th>
+                <th>Amount</th>
+                <th>Team</th>
             </tr>
         </thead>
         <tbody>
             @foreach (sportEquipment item in @ViewBag.MangerMode)
             {
-                <tr>
-                    <td><img src="@item.linkToImage" class="imageInTable" /></td>
-                    <td>@item.sportBranch</td>
-                    <td>@item.productName</td>
-                    <td>@item.productCompany</td>
-                    <td>@item.productPrice$</td>
-                </tr>
+            <tr>
+                <td><img src="@item.linkToImage" class="imageInTable" /></td>
+                <td>@item.Id</td>
+                <td>@item.sportBranch</td>
+                <td>@item.productName</td>
+                <td>@item.productCompany</td>
+                <td>@item.productPrice$</td>
+                <td>@item.productAmount</td>
+                <td>@item.SportClubsID</td>
+            </tr>
             }
 
         </tbody>
