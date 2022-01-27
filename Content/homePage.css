@@ -6,6 +6,7 @@
 
 body {
     font-family: cursive;
+    padding-top: 0;
 }
 
 a {
@@ -29,14 +30,17 @@ li {
 }
 
 .logoImage {
-    width: 120px;
-    height: 100px;
+    width: 100px;
+    height: 80px;
+    border-radius: 15%;
 }
+
 .menu {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     gap: 1em;
-    font-size: 18px;
+    font-size: 25px;
+    font-weight: bold;
 }
 
     .menu li:hover {
@@ -53,32 +57,12 @@ li {
     position: relative;
 }
 
-.dropdown {
-    background-color: rgb(1, 139, 139);
-    padding: 1em 0;
-    position: absolute; /*WITH RESPECT TO PARENT*/
-    display: none;
-    border-radius: 8px;
-    top: 35px;
-}
 
-    .dropdown li + li {
-        margin-top: 10px;
+
+
+    .services:hover .dropdown {
+        display: block;
     }
-
-    .dropdown li {
-        padding: 0.5em 1em;
-        width: 8em;
-        text-align: center;
-    }
-
-        .dropdown li:hover {
-            background-color: #4c9e9e;
-        }
-
-.services:hover .dropdown {
-    display: block;
-}
 
 input[type=checkbox] {
     display: none;
@@ -89,6 +73,69 @@ input[type=checkbox] {
     font-size: 24px;
     user-select: none;
 }
+
+.footer-basic {
+    background-color: #4c9e9e;
+    color: #4b4c4d;
+
+
+}
+
+/*
+
+    .footer-basic ul {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    .footer-basic li {
+        padding: 0 10px;
+    }
+
+    .footer-basic ul a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+
+        .footer-basic ul a:hover {
+            opacity: 1;
+        }
+
+    .footer-basic .social {
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+        .footer-basic .social > a {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin: 0 8px;
+            color: inherit;
+            opacity: 0.75;
+        }
+
+            .footer-basic .social > a:hover {
+                opacity: 0.9;
+            }
+
+    .footer-basic .copyright {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 13px;
+        color: #aaa;
+        margin-bottom: 0;
+    }*/
 
 @media (max-width: 768px) {
     .menu {

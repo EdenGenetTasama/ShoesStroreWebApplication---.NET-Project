@@ -182,6 +182,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\2048px-Octicons-mark-github.svg.png" />
+    <Content Include="images\Facebook_icon.png" />
+    <Content Include="images\linkdinNew.jpg" />
+    <Content Include="images\whatappimg.png" />
     <Content Include="images\אינדי.jpeg" />
     <Content Include="images\טק קריירה.jpeg" />
     <Content Include="Scripts\bootstrap.js" />
