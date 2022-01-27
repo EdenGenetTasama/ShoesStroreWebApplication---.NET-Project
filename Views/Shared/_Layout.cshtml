@@ -8,6 +8,9 @@
     @Scripts.Render("~/bundles/modernizr")
     <link href="@Url.Content("~/Content/homePage.css")" rel="stylesheet" type="text/css" />
 </head>
+
+
+
 <body>
     <nav class="navbar">
         <div class="logo"><img src="~/images/אינדי.jpeg" class="logoImage" /></div>
@@ -27,24 +30,25 @@
 
 
     <div class="container body-content">
-        @RenderBody()
-
+        @RenderBody();
+        <hr />
     </div>
 
-    <hr />
-    <footer>
-        <div class="footer-basic">
-            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="iconify" data-icon="ion:logo-facebook"  data-width="35" data-height="35"></i></a><a href="#"><i class="iconify" data-icon="ion:logo-linkedin" data-width="35" data-height="35"></i></a><a href="#"><i class="iconify" data-icon="ion:logo-github" data-width="35" data-height="35"></i></a><a href="#"><i class="iconify" data-icon="ion:logo-whatsapp" data-width="35" data-height="35"></i></a></div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Home</a></li>
-                <li class="list-inline-item"><a href="#">Services</a></li>
-                <li class="list-inline-item"><a href="#">About</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                <li class="list-inline-item">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li class="list-inline-item">@Html.ActionLink("Shoes", "ShoesPage", "Shoes")</li>
+                <li class="list-inline-item">@Html.ActionLink("Shirts", "ShirtsPage", "Shirts")</li>
+                <li class="list-inline-item">@Html.ActionLink("Pants", "ShowPantsall", "Pants")</li>
+                <li class="list-inline-item">@Html.ActionLink("Sport Item", "EquipmentPage", "SportEquipment")</li>
             </ul>
             <p class="copyright">Eden Genet Tasama</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
