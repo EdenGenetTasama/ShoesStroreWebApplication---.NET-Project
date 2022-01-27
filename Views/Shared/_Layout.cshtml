@@ -6,30 +6,24 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="@Url.Content("~/Content/homePage.css")" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Sport Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <nav class="navbar">
+        <div class="logo"><img src="~/images/אינדי.jpeg" class="logoImage"/></div>
+        <ul class="nav-links">
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="menu">
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Shoes", "ShoesPage", "Shoes")</li>
+            <li>@Html.ActionLink("Shirts", "ShirtsPage", "Shirts")</li>
+            <li>@Html.ActionLink("Pants", "ShowPantsall", "Pants")</li>
+            <li>@Html.ActionLink("Sport Item", "EquipmentPage", "SportEquipment")</li>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li class="nav-item">@Html.ActionLink("Shoes", "ShoesPage", "Shoes")</li>
-                    <li class="nav-item">@Html.ActionLink("Shirts", "ShirtsPage", "Shirts")</li>
-                    <li class="nav-item">@Html.ActionLink("Pants", "ShowPantsall", "Pants")</li>
-                    <li class="nav-item">@Html.ActionLink("Sport Item", "EquipmentPage", "SportEquipment")</li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
+        </ul>
+        <div class="logo"><img src="~/images/טק קריירה.jpeg" class="logoImage" /></div>
+    </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
