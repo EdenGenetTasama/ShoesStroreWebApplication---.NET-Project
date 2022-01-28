@@ -27,13 +27,18 @@
     position: absolute;
     bottom: 8px;
     right: 16px;
+    color: white;
+    background-color: black;
+    border-radius: 15%;
 }
 
 .top-left {
     position: absolute;
     top: 8px;
     left: 16px;
-    color: wheat;
+    color: white;
+    background-color:black;
+    border-radius:15%;
 }
 
 .sectinImages {
@@ -56,3 +61,14 @@
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     margin: 2%;
 }
+
+
+.sectionOfText {
+    width: 80%;
+    align-items: center;
+    display:flex;
+    justify-content:center;
+}
+
+
+
