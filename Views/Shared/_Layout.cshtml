@@ -6,6 +6,9 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lobster&family=Neonderthaw&family=Rampart+One&family=Trade+Winds&display=swap" rel="stylesheet">
     <link href="@Url.Content("~/Content/homePage.css")" rel="stylesheet" type="text/css" />
 </head>
 
@@ -28,15 +31,15 @@
         <div class="logo"><img src="~/images/טק קריירה.jpeg" class="logoImage" /></div>
     </nav>
 
-
-    <div class="container body-content">
+    
+    <div>
         @RenderBody();
         <hr />
     </div>
 
     <div class="footer-basic">
         <footer>
-            <div class="social"><a href="#"><i class="iconify" data-icon="ion:logo-facebook"  data-width="35" data-height="35"></i></a><a href="#"><i class="iconify" data-icon="ion:logo-linkedin" data-width="35" data-height="35"></i></a><a href="#"><i class="iconify" data-icon="ion:logo-github" data-width="35" data-height="35"></i></a><a href="#"><i class="iconify" data-icon="ion:logo-whatsapp" data-width="35" data-height="35"></i></a></div>
+            <div class="social"><a href="https://www.facebook.com/eden.tas"><i class="iconify" data-icon="ion:logo-facebook" data-width="35" data-height="35"></i></a><a href="https://www.linkedin.com/in/eden-genet-tasama-8a2a18220/"><i class="iconify" data-icon="ion:logo-linkedin" data-width="35" data-height="35"></i></a><a href="https://github.com/EdenGenetTasama"><i class="iconify" data-icon="ion:logo-github" data-width="35" data-height="35"></i></a><a href="https://web.whatsapp.com/"><i class="iconify" data-icon="ion:logo-whatsapp" data-width="35" data-height="35"></i></a></div>
             <ul class="list-inline">
                 <li class="list-inline-item">@Html.ActionLink("Home", "Index", "Home")</li>
                 <li class="list-inline-item">@Html.ActionLink("Shoes", "ShoesPage", "Shoes")</li>

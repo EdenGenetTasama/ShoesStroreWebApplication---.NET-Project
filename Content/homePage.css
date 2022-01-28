@@ -22,7 +22,6 @@ li {
     align-items: center;
     justify-content: space-between;
     background-color: teal;
-    color: #fff;
 }
 
 .nav-links a {
@@ -39,8 +38,9 @@ li {
     display: flex;
     justify-content: space-between;
     gap: 1em;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
+    color: wheat;
 }
 
     .menu li:hover {
@@ -50,8 +50,12 @@ li {
     }
 
     .menu li {
+        color: wheat !important;
         padding: 5px 14px;
+        font-family: 'Trade Winds', cursive;
     }
+
+
 
 .services {
     position: relative;
@@ -96,8 +100,8 @@ input[type=checkbox] {
     }
 
     .footer-basic ul a {
-        color: inherit;
-        text-decoration: none;
+        color: white;
+        ext-decoration: none;
         opacity: 0.8;
     }
 
@@ -112,18 +116,18 @@ input[type=checkbox] {
 
 
 
-    .footer-basic .social > a {
-        font-size: 24px;
-        width: 30px;
-        height: 30px;
-        line-height: 40px;
-        display: inline-block;
-        text-align: center;
-        border-radius: 50%;
-        margin: 0 8px;
-        color: wheat;
-        opacity: 0.75;
-    }
+        .footer-basic .social > a {
+            font-size: 24px;
+            width: 30px;
+            height: 30px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 8px;
+            color: wheat;
+            opacity: 0.75;
+        }
 
             .footer-basic .social > a:hover {
                 opacity: 0.9;
@@ -133,12 +137,14 @@ input[type=checkbox] {
         margin-top: 15px;
         text-align: center;
         font-size: 13px;
-        color: #aaa;
+        color: wheat;
         margin-bottom: 0;
     }
 
-@media (max-width: 768px) {
 
+
+
+@media (max-width: 768px) {
     .logoImage {
         width: 80%;
         height: 80%;
@@ -156,7 +162,7 @@ input[type=checkbox] {
 
         .menu li:hover {
             display: inline-block;
-            background-color: #4c9e9e;
+            color: wheat;
             transition: 0.3s ease;
         }
 

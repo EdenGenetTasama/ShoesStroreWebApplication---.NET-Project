@@ -6,6 +6,8 @@
 .TableId {
     table-layout: fixed;
     width: 100%;
+    margin-left:20px;
+    margin-right:20px;
     border-collapse: collapse;
     border: 3px solid #A68DAD;
 }
@@ -78,7 +80,7 @@ thead, tfoot {
 
 
 tbody tr:nth-child(even) {
-    background-color: #DFD3C3; /*lilac color*/
+    background-color: #DFD3C3; lilac color
     /
 }
 

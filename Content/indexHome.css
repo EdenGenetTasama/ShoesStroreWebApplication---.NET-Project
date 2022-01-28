@@ -1,0 +1,58 @@
+﻿body {
+    background-color: #F0ECE3;
+}
+
+
+.containerOfFirstSec {
+    position: relative;
+}
+
+
+
+.imageOfHome {
+    width: 100%;
+    height: 700px;
+}
+
+.containerOfSection {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.col-md-4 {
+    padding: 0.5%;
+}
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: wheat;
+}
+
+.sectinImages {
+    width: 100%;
+    height: 300px;
+}
+
+
+.textOfHomePage {
+    width: 100%;
+    height: 70px;
+    font-size: 50px;
+    background-color: #F0ECE3;
+    color: black;
+    font-weight: bold;
+    font-family: 'Trade Winds', cursive;
+}
+
+.boxHado {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin: 2%;
+}
