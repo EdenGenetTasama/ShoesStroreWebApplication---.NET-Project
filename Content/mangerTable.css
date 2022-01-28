@@ -80,8 +80,9 @@ thead, tfoot {
 
 
 tbody tr:nth-child(even) {
-    background-color: #DFD3C3; lilac color
-    /
+    background-color: #DFD3C3; 
+/*background-color:black;*/
+    
 }
 
 
