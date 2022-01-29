@@ -146,6 +146,7 @@
     <Compile Include="Controllers\api\ShoesController.cs" />
     <Compile Include="Controllers\api\SportEquipmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MansClothingController.cs" />
     <Compile Include="Controllers\PantsController.cs" />
     <Compile Include="Controllers\ShirtsController.cs" />
     <Compile Include="Controllers\ShoesController.cs" />
@@ -258,6 +259,9 @@
     <Content Include="Views\SportEquipment\OnlyBaskBallEquipment.cshtml" />
     <Content Include="Views\SportEquipment\OnlyFootballEquipment.cshtml" />
     <Content Include="Views\SportEquipment\SortEquipment.cshtml" />
+    <Content Include="Views\MansClothing\onlyMansClothes.cshtml" />
+    <Content Include="Views\MansClothing\OnlyWomenClothes.cshtml" />
+    <Content Include="Views\MansClothing\OnlyKidesClothes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

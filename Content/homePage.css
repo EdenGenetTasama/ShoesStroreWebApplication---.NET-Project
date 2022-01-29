@@ -117,20 +117,20 @@ input[type=checkbox] {
 
 
         .footer-basic .social > a {
-            font-size: 24px;
+            font-size: 28px;
             width: 30px;
             height: 30px;
             line-height: 40px;
             display: inline-block;
             text-align: center;
             border-radius: 50%;
-            margin: 0 8px;
-            color: wheat;
+            margin: 1%;
+            color: white;
             opacity: 0.75;
         }
 
             .footer-basic .social > a:hover {
-                opacity: 0.9;
+                opacity: 1;
             }
 
     .footer-basic .copyright {
@@ -148,7 +148,7 @@ input[type=checkbox] {
     .logoImage {
         width: 60%;
         height: 60%;
-        justify-items:stretch;
+     
     }
 
     .menu {

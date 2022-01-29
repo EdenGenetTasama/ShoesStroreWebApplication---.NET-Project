@@ -64,19 +64,14 @@
 }
 
 
-.sectionOfText {
-    width: 80%;
-    align-items: center;
-    display:flex;
-    justify-content:center;
-    border: 2px solid black;
-}
-
 
 @media (min-width: 768px) {
     .textOfHomePage {
         height: auto;
         font-size:10px;
+    }
+    .imageOfHome{
+        height:auto;
     }
 }
 
