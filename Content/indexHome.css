@@ -67,10 +67,7 @@
 
 
 @media (min-width: 768px) {
-    .textOfHomePage {
-        height: auto;
-        font-size:10px;
-    }
+ 
     .imageOfHome{
         height:auto;
     }
