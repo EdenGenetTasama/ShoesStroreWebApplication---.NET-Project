@@ -53,6 +53,7 @@
     font-size: 50px;
     background-color: #F0ECE3;
     color: black;
+    text-align:center;
     font-weight: bold;
     font-family: 'Trade Winds', cursive;
 }
@@ -68,6 +69,15 @@
     align-items: center;
     display:flex;
     justify-content:center;
+    border: 2px solid black;
+}
+
+
+@media (min-width: 768px) {
+    .textOfHomePage {
+        height: auto;
+        font-size:10px;
+    }
 }
 
 

@@ -146,8 +146,9 @@ input[type=checkbox] {
 
 @media (max-width: 768px) {
     .logoImage {
-        width: 80%;
-        height: 80%;
+        width: 60%;
+        height: 60%;
+        justify-items:stretch;
     }
 
     .menu {

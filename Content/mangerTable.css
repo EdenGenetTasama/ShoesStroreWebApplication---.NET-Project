@@ -3,11 +3,13 @@
     font-family: 'helvetica neue', helvetica, arial, sans-serif;
 }
 
+table {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 .TableId {
     table-layout: fixed;
     width: 100%;
-    margin-left:20px;
-    margin-right:20px;
     border-collapse: collapse;
     border: 3px solid #A68DAD;
 }
