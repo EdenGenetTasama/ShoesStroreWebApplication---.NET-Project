@@ -5035,12 +5035,12 @@ a.badge:focus {
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    font-size: 20px;
+    font-size: 50px;
     text-align: center;
     color: inherit;
     background-color: #eeeeee;
     border: 2px solid black;
-    margin:20%;
+    margin:2%;
 }
 .jumbotron h1,
 .jumbotron .h1 {
