@@ -26,14 +26,14 @@
                 <img src=@item.linkImage class="imageInCard">
                 <h4 class="shoeInfo">@item.shoeType @item.shoeModel</h4>
                 <div>
-                    @if (@item.isOnSall)
+                    @if (@item.isOnSall != false)
                     {
-                        <div class="onOffSaleLine">on sale</div>
+                        <div class="onOffSaleLine">Sale</div>
                     }
-                    else
+                    @*else
                     {
                         <div class="onOffSaleLine">not sale</div>
-                    }
+                    }*@
                 </div>
                 <p class="priceAndCompanyInfo">
                     @item.shoePrice$  @item.company
